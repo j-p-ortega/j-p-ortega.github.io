@@ -1,0 +1,40 @@
+body {
+    background: rgb(134, 134, 134);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2.5%;
+}
+header {
+    background: rgb(254, 254, 255);
+    padding: 2.5%;
+    margin: 0% 0% 1.5% 0%;
+} 
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding 0;
+}
+li {
+   display: inline-block;
+   margin: 2.5%;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+section {
+   background: cadetblue;
+   display: flex;
+   flex-direction: row;
+   padding: 2.5%;
+}
+section div {
+   background: rgb(201, 136, 255);
+   width: 30%;
+   margin: auto;
+   padding: 1%;
+}
+footer {
+   background: black;
+   color: aliceblue;
+   margin: 1.5% 0% 0% 0%;
+}

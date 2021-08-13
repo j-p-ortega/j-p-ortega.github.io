@@ -6,14 +6,60 @@
             body {
                 background: rgb(134, 134, 134);
                 font-family: Arial, Helvetica, sans-serif;
+                margin: 2.5%;
             }
-           h1 {
-                color: rgb(10, 10, 110);
+           header {
+                background: rgb(254, 254, 255);
+                padding: 2.5%;
            } 
+           ul {
+               list-style-type: none;
+               margin: 0;
+               padding 0;
+           }
+           li {
+               display: inline-block;
+               margin: 2.5%;
+           }
+           section {
+               background: cadetblue;
+               display: flex;
+               flex-direction: row;
+               padding: 2.5%;
+           }
+           div {
+               background: rgb(201, 136, 255);
+               width: 30%;
+               margin: auto;
+               padding: 1%;
+           }
+           footer {
+               background: black;
+           }
         </style>
     </head>
         <body>
-            <h1>Juan Pablo Ortega</h1>
-            Hola soy J. P. Ortega.
+            <header>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Pubications</li>
+                        <li>Contact</li>
+                    </ul>
+
+                </nav>
+                <h1>Juan Pablo Ortega</h1>
+            </header>
+            <section>
+                <p>Welcome to my cv website. This is still a work
+                    in progress.
+                </p>
+            </section>
+            <section>
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+            </section>
+            <footer>footer</footer>
         </body>
 </html>

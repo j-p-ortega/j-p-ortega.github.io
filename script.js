@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing",{
-        strings: ["Mathematician","Computer Scientist","Researcher","Teacher","Programmer"],
+        strings: ["Mathematician","Computer Scientist","Teacher","Researcher","Programmer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true

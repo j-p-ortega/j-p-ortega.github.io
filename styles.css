@@ -23,7 +23,7 @@
 }
 .navbar.sticky{
    padding: 15px 0;
-   background: crimson;
+   background: #187BCD;
 }
 .navbar .max-width{
    display: flex;
@@ -37,7 +37,7 @@
 
 }
 .navbar .logo a span{
-   color: crimson;
+   color: #187BCD;
 }
 .navbar.sticky .logo a span{
    color: #fff;
@@ -55,7 +55,7 @@
    transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-   color: crimson;
+   color: #187BCD;
 }
 .navbar.sticky .menu li a:hover{
    color: black;
@@ -71,7 +71,7 @@
 /* home section styling */
 .home{
    display: flex;
-   background: black; /*gotta change for url("images/bannerjpg") no-repeat center*/
+   background: url("images/banner.jpg") no-repeat center;
    height: 100vh;
    color: #fff;
    min-height: 500px;
@@ -95,18 +95,18 @@
    margin: 5px 0;
 }
 .home .home-content .text-3 span{
-   color: crimson;
+   color: #187BCD;
 }
 
 .home .home-content a{
    display: inline-block;
-   background: crimson;
+   background: #187BCD;
    color: #fff;
    font-size: 25px;
    padding: 12px 36px;
    margin-top: 20px;
    border-radius: 6px;
-   border: 2px solid crimson;
+   border: 2px solid #187BCD;
    transition: all 0.3s ease;
 }
 .home .home-content a:hover{
@@ -118,11 +118,11 @@
 section{
    padding: 100px 0;
 }
-.about{
+.about, .services{
    font-family: 'Poppins', sans-serif;
 }
 
-.about .title{
+section .title{
    position: relative;
    text-align: center;
    font-size: 40px;
@@ -131,7 +131,7 @@ section{
    padding-bottom: 20px;
    font-family: 'Ubuntu',sans-serif;
 }
-.about .title::before{
+section .title::before{
    content: "";
    position: absolute;
    bottom: 0px;
@@ -141,18 +141,20 @@ section{
    background: black;
    transform: translateX(-50%);
 }
-.about .title::after{
-   content: "Who I am";
+section .title::after{
    position: absolute;
    bottom: -12px;
    left: 50%;
    font-size: 20px;
-   color: crimson;
+   color: #187BCD;
    padding: 5px;
    background: #fff;
    transform: translateX(-50%);
 }
-.about .about-content{
+.about .title::after{
+   content: "Who I am";
+}
+.about .about-content, .services .services-content{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
@@ -176,33 +178,77 @@ font-weight: 600;
 margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-color: crimson;
+color: #187BCD;
 }
 .about .about-content .right p{
    text-align: justify;
 }
 .about .about-content .right a{
    display: inline-block;
-   background: crimson;
+   background: #187BCD;
    color: #fff;
    font-size: 20px;
    font-weight: 500;
    padding: 10px 30px;
    margin-top: 20px;
    border-radius: 6px;
-   border: 2px solid crimson;
+   border: 2px solid #187BCD;
    transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-   color: crimson;
+   color: black;
    background: #fff;
 }
 
+/*services section styles*/
+.services{
+   color: #fff;
+   background: #111;
+}
+.services .title::before{
+   background: #fff;
+}
+.services .title::after{
+   background: #111;
+content: "What I provide";
+}
+.services .services-content .card{
+   width: calc(33% - 20px);
+   background: #222;
+   text-align: center;
+   border-radius: 6px;
+   padding: 20px 25px;
+   cursor: pointer;
+   transition: all 0.3s ease;
 
+}
+.services .services-content .card:hover{
+   background: #187BCD;
+}
 
+.services .services-content .card .box{
+   transition: all 0.3s ease;
+}
 
+.services .services-content .card:hover i{
+   color: #fff;
+   transition: all 0.3s ease;
+}
 
+ .services .services-content .card:hover .box{
+   transform: scale(1.05);
+}
 
+.services .services-content .card i{
+   font-size: 50px;
+   color: #187BCD;
+}
+
+.services .services-content .card .text{
+   font-size: 25px;
+   font-weight: 500;
+   margin: 10px 0 7px 0;
+}
 
 
 
@@ -287,6 +333,11 @@ color: crimson;
    }
    .about .about-content .right{
       flex: 100%;
+   }
+
+   .services .services-content .card {
+      width: 100%;
+      margin-bottom: 20px;
    }
 }
 

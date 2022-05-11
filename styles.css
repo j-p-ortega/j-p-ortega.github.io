@@ -114,11 +114,11 @@
    background: #fff;
 }
 
-/* about me section styling*/
+/* all similar content styling*/
 section{
    padding: 100px 0;
 }
-.about, .services{
+.about, .services, .teams{
    font-family: 'Poppins', sans-serif;
 }
 
@@ -167,7 +167,7 @@ section .title::after{
    height: 400px;
    width: 400px;
    object-fit: cover;
-   border-radius: 6px;
+   border-radius: 20px;
 }
 .about .about-content .right{
    width: 50%;
@@ -201,22 +201,29 @@ color: #187BCD;
 }
 
 /*services section styles*/
-.services{
+.services, .teams{
    color: #fff;
    background: #111;
+}
+.teams .title::before{
+   background: #fff;
+}
+.teams .title::after{
+   background: #111;
+content: "What I like";
 }
 .services .title::before{
    background: #fff;
 }
 .services .title::after{
    background: #111;
-content: "What I provide";
+content: "What I like";
 }
 .services .services-content .card{
    width: calc(33% - 20px);
    background: #222;
    text-align: center;
-   border-radius: 6px;
+   border-radius: 20px;
    padding: 20px 25px;
    cursor: pointer;
    transition: all 0.3s ease;
@@ -250,8 +257,99 @@ content: "What I provide";
    margin: 10px 0 7px 0;
 }
 
+/*teams section styling*/
+.teams .title::after{
+   content: "Where I learned";
+}
+.teams .carousel .card{
+   position: relative;
+   background: #222;
+   border-radius: 20px;
+   padding: 25px 35px;
+   text-align: center;
+   transition: all 0.3s ease;
+}
+
+.teams .carousel .card .box{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   z-index: 100;
+   padding: 20px 0 0 0;
+}
+
+.teams .carousel .card .text{
+   font-size: 25px;
+   font-weight: 500;
+   margin: 10px 0 7px 0;
+}
+.teams .carousel .card .country{
+   font-size: 15px;
+   font-weight: 500;
+   color:#187BCD;
+   margin: -10px 0 7px 0;
+}
+.teams .carousel .card:hover{
+   background: #187BCD;
+}
+.teams .carousel .card img{
+   width:55%;
+   height: auto; 
+   object-position:50% 50%;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 5px solid #fff;
+   z-index: 100;
+}
+
+.teams .carousel .card:hover .box .country{
+   transition: all 0.3s ease;
+   transform: scale(1.05);
+}
+
+.teams .carousel .card:hover img{
+   transition: all 0.3s ease;
+   transform: scale(1.05);
+}
 
 
+.teams .carousel .card:hover .box .text{
+   transition: all 0.3s ease;
+   transform: scale(1.05);
+}
+
+.teams .carousel .card .liner{
+   content: "";
+   position: absolute;
+   top: 0px;
+   height: 28%;
+   width: 100%;
+   background: #187BCD;
+   border-radius: 20px 20px 0 0;
+}
+
+.teams .carousel .card:hover .liner{
+   transform: none;
+}
+
+.teams .carousel .card:hover .country{
+   color: #fff;
+}
+
+.owl-dots{
+   text-align: center;
+   margin-top: 20px;
+}
+
+.owl-dot{
+   height: 13px;
+   width: 13px;
+   outline: none!important;
+   border-radius: 50%;
+   border: 2px solid #187BCD!important;
+}
 
 /* responsive media*/
 @media(max-width: 1300px){

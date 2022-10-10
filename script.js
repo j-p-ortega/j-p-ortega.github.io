@@ -14,14 +14,14 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing",{
-        strings: ["Mathematician","Data Scientist","Researcher","Business Analist"],
+        strings: ["Mathematician","Data Scientist","Researcher","Data Analyst"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing2",{
-        strings: ["Mathematician","Data Scientist","Researcher","Business Analist"],
+        strings: ["Mathematician","Data Scientist","Researcher","Business Analyst"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true

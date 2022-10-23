@@ -24,12 +24,11 @@
         <div class="max-width">
             <div class="logo"><a href="#">J. P. <span>Ortega</span></a></div>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Interests</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Trajectory</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#teams">Trajectory</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -43,7 +42,7 @@
                <div class="text-1">Hello, my name is</div>
                <div class="text-2">Juan Pablo Ortega</div>
                <div class="text-3">and I'm a <span class="typing"></span></div>
-                <a href="#">More info</a>
+                <a href="#about">More info</a>
             </div>
        </div>
    </section>
@@ -63,7 +62,7 @@
                     Currently, I am searching for a junior data analyst position. I have experience with 
                     Python, R, Google Cloud and SQL.
                 </p>
-                <a href="#">Download CV</a>
+                <a href="images/CV_JP_Ortega.pdf" download>Download CV</a>
             </div>
          </div>
     </div>
@@ -73,7 +72,7 @@
 
 <section class="services" id="services">
     <div class="max-width">
-        <h2 class="title">Professional Interest</h2>
+        <h2 class="title">Professional Services</h2>
         <div class="services-content">
                 <div class="card">
                     <div class="box">
@@ -155,8 +154,45 @@
         </div>
     </div>
 </section>
+<!--contact section-->
+<div id="contact">
+    <div class="container">
+            <div class="flex contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>jortegab@unal.edu.co</p>
+                <p><i class="fas fa-phone-square-alt"></i>+57 3002831954</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/juan-pablo-ortega-117482244/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/j-p-ortega"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="flex contact-right">
+               <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your name" required>
+                <input type="email" name="Email" placeholder="Your email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="subbtn">Submit</button>
+                </form>
+                <span id="msg"></span> 
+            </div>
+    </div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw9AWmrN0aV6ybweh7Vvsj-pnCYrP3qGITABVNVPp9JQMWKxroQ3Xu-N0-V6dUdLZ9u9A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
 
-
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+    form.reset()})
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
    <script src="script.js"></script>
 </body>
 </html>
